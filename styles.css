@@ -1,0 +1,123 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  width: 100%;
+  min-width: 40rem;
+  min-height: 100vh;
+  background: linear-gradient(339deg, #fad961, #f76b1c);
+  padding: 1rem;
+}
+
+.container .to-do {
+  width: 60%;
+  min-width: 55rem;
+  background: #fff;
+  border-radius: 1rem;
+  margin: 10rem auto 2rem;
+  padding: 3rem 4rem 7rem;
+}
+
+.to-do h1 {
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1.2rem;
+}
+
+.to-do h1 img {
+  width: 3rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #edeef0;
+  border-radius: 3rem;
+  padding-left: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.row input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  border: 4rem;
+  padding: 1rem;
+  font-size: 1.7rem;
+}
+
+.row button {
+  border: none;
+  outline: none;
+  padding: 1.6rem 4rem;
+  background: #ff5945;
+  color: #fff;
+  font-size: 1.6rem;
+  cursor: pointer;
+  border-radius: 4rem;
+  transition: 0.3s ease;
+  &:hover {
+    background: #f35341;
+  }
+}
+
+ul li {
+  list-style: none;
+  padding: 1.2rem 0.8rem 1.2rem 5rem;
+  font-size: 1.6rem;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 2.8rem;
+  width: 2.8rem;
+  border-radius: 50%;
+  background-image: url(images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 1.2rem;
+  left: 0.8rem;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(images/checked.png);
+}
+
+ul li span {
+  position: absolute;
+  top: 0.5rem;
+  right: 0;
+  width: 4rem;
+  height: 4rem;
+  font-size: 2.5rem;
+  line-height: 4rem;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.5s ease;
+}
+
+ul li span:hover {
+  background: #edeef0;
+}
